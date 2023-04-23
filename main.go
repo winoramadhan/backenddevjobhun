@@ -26,10 +26,10 @@ type hobi struct{
 }
 
 
-func (c *Client) CreatePost(content string) (id int64, err error) {
-	// run the insert script to db
+func (c *Client) CreatePost(nama string) (id int, err error) {
+	
 	result, err := c.DB.Exec(`
-		INSERT INTO post (content, create_time)
+		INSERT INTO post (nama)
 		VALUES (?, now())
 	`,
 		content)
@@ -38,7 +38,7 @@ func (c *Client) CreatePost(content string) (id int64, err error) {
 		return
 	}
 
-	// get the last insert id
+	
 	id, err = result.LastInsertId()
 	if err != nil {
 		log.Println(err)
