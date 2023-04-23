@@ -11,8 +11,8 @@ type mahasiswa struct{
     ID          int     `json:"id"`
     Nama        string  `json:"nama"`
     Usia        int     `json:"usia"`
-    Gender      int     'json:"gender"`
-    Registrasi  int     'json:"registrasi"`
+    Gender      int     `json:"gender"`
+    Registrasi  int     `json:"registrasi"`
 }
 
 type jurusan struct{
