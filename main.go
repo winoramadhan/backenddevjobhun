@@ -26,7 +26,7 @@ type hobi struct{
 }
 
 
-func (c *Client) CreatePost(nama string) (id int, err error) {
+func (c *Client) CreateData(nama string) (id int, err error) {
 	
 	result, err := c.DB.Exec(`
 		INSERT INTO post (nama)
