@@ -30,9 +30,7 @@ func (c *Client) CreateData(nama string) (id int, err error) {
 	
 	result, err := c.DB.Exec(`
 		INSERT INTO post (nama)
-		VALUES (?, now())
-	`,
-		content)
+		VALUES (?, now())`, content)
 	if err != nil {
 		log.Println(err)
 		return
